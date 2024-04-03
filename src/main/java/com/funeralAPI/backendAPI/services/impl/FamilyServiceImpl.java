@@ -62,6 +62,5 @@ public class FamilyServiceImpl implements FamilyService {
     public void deleteFamily(int id) {
         Family family=familyRepository.findById(id).orElseThrow(()->new ResourceNotFoundException("family not found id"+id));
         familyRepository.deleteById(id);
-
     }
 }
